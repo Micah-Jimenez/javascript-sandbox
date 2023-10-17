@@ -1,9 +1,9 @@
 // String
-const firstName = 'Sara';
+const firstName = 'Sarah';
 
 // Number
 const age = 30;
-const temp = 98.9;
+const temp = 98.8;
 
 // Boolean
 const hasKids = true;
@@ -22,23 +22,17 @@ const id = Symbol('id');
 const n = 9007199254740991n;
 
 // Reference Types
-
 const numbers = [1, 2, 3, 4];
 
 const person = {
-  name: 'Brad',
-};
+    name: 'Micah',
+    age: 20
+}
 
 function sayHello() {
-  console.log('Hello');
+    console.log('Hello');
 }
 
 const output = sayHello;
 
-console.log(output, typeof output);
-
-// More info on why typeof null == object
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof#typeof_null
-
-//  More info on the "function object" type
-// https://262.ecma-international.org/5.1/#sec-11.4.3
+console.log(output, typeof(output));
