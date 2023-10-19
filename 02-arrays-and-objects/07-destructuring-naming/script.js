@@ -1,4 +1,5 @@
-// Setting object properties with the same name as a variable
+let x;
+
 const firstName = 'John';
 const lastName = 'Doe';
 const age = 30;
@@ -11,8 +12,7 @@ const person = {
 
 console.log(person.age);
 
-// Destructuring object properties
-
+// Destructuring
 const todo = {
   id: 1,
   title: 'Take out trash',
@@ -21,17 +21,17 @@ const todo = {
   },
 };
 
-const {
-  id: todoId, // rename id to todoId
+const { 
+  id: todoID, // Just colon == renaming
   title,
-  user: { name }, // destructuring multiple levels
+  user: { name } // colon + curly braces == destructuring
 } = todo;
 
-console.log(todoId);
+console.log(todoID, title, name);
 
-// Destructuring arrays & using the rest/spread operator
-const numbers = [23, 67, 33, 49, 52];
+// Destructure arrays
+const numbers = [23, 67, 33, 49];
 
-const [first, second, ...rest] = numbers;
+const [first, second, ...rest] = numbers; // brackets for arrays, curly braces for objects
 
-console.log(first, second, rest);
+console.log(first, second, rest); // ... and a variable name will give you the rest of the elements
