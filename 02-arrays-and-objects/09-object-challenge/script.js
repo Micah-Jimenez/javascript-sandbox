@@ -1,8 +1,16 @@
-// Step 1
-const library = [
+library = [
   {
-    title: 'The Road Ahead',
-    author: 'Bill Gates',
+    title: 'Art of War',
+    author: 'Sun Tzu',
+    status: {
+      own: false,
+      reading: true,
+      read: false,
+    },
+  },
+  {
+    title: 'Diary of a Wimpy Kid',
+    author: 'Jeff Kinney',
     status: {
       own: true,
       reading: false,
@@ -10,17 +18,8 @@ const library = [
     },
   },
   {
-    title: 'Steve Jobs',
-    author: 'Walter Isaacson',
-    status: {
-      own: true,
-      reading: false,
-      read: false,
-    },
-  },
-  {
-    title: 'Mockingjay',
-    author: 'Suzanne Collins',
+    title: 'Hatchet',
+    author: 'Gary Paulsen',
     status: {
       own: true,
       reading: false,
@@ -29,17 +28,12 @@ const library = [
   },
 ];
 
-// Step 2
-library[0].status.read = true;
-library[1].status.read = true;
-library[2].status.read = true;
+library[0].read = true;
+library[1].read = true;
+library[2].read = true;
 
-// Step 3
-const { title: firstBook } = library[0];
+const {title: firstBook} = library[0];
 
-console.log(firstBook);
+const str = JSON.stringify(library);
 
-// Step 4
-const libraryJSON = JSON.stringify(library);
-
-console.log(libraryJSON);
+console.log(str);
