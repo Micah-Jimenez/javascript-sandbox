@@ -4,17 +4,12 @@ const post = {
   body: 'This is the body',
 };
 
-// Convert to JSON string
+// Convert to a JSON string
 const str = JSON.stringify(post);
-
-console.log(str.id);
 
 // Parse JSON
 const obj = JSON.parse(str);
 
-console.log(obj.id);
-
-// JSON & arrays
 const posts = [
   {
     id: 1,
@@ -25,7 +20,7 @@ const posts = [
     id: 2,
     title: 'Post Two',
     body: 'This is the body',
-  },
+  }
 ];
 
 const str2 = JSON.stringify(posts);
