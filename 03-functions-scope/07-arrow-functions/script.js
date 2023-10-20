@@ -1,34 +1,39 @@
-//  Normal function declaration
 // function add(a, b) {
 //   return a + b;
 // }
 
-// Arrow function syntax
+
+// Arrow Function Syntax
 const add = (a, b) => {
   return a + b;
 };
 
-// Implicit Return
+console.log(add(1, 2));
+
+
+// Implicit return
 const subtract = (a, b) => a - b;
 
-// Can leave off () with a single param
-const double = (a) => a * 2;
+console.log(subtract(2, 1));
+// Can leave off parenthesis with a single param
+// const double = a => a * 2; 
+
 
 // Returning an object
-const createObj = () => ({
-  name: 'Brad',
-});
+// When creating an object in a arrow function you need to surround your curly braces in parenthesis
+const createObject = () => ({
+  name: 'Micah',
+})
+
+console.log(createObject());
+
 
 const numbers = [1, 2, 3, 4, 5];
 
-numbers.forEach(function (n) {
-  console.log(n);
-});
+// Arrow Function in a Callback
 
-// Arrow function in a callback
-numbers.forEach((n) => console.log(n));
+// numbers.forEach(function (n) {
+//   console.log(n);
+// })
 
-console.log(add(1, 2));
-console.log(subtract(10, 5));
-console.log(double(10));
-console.log(createObj());
+numbers.forEach(n => console.log(n))
