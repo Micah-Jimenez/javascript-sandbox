@@ -6,20 +6,29 @@ function first() {
     console.log(x + y);
   }
 
-  // console.log(y);
-
   second();
+
 }
 
 first();
 
-if (true) {
-  const x = 100;
+for (let i = 0; i < 3; i++) {
+  console.log(i);
+  for (let j = 0; j < 3; j++) {
+    console.log(i + j);
+  }
+  // console.log(j); ERROR
+}
 
-  if (x === 100) {
+
+
+
+const x = 100;
+
+if (true) {
+  if ( x === 100) {
     const y = 200;
     console.log(x + y);
   }
-
-  console.log(y);
+  // console.log(y); ERROR
 }
