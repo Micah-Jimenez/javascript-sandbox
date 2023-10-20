@@ -1,40 +1,31 @@
 const x = 100;
+const foo = 1;
+var bar = 2;
 
-// An If statement is a block
 if (true) {
+  const y = 200
   console.log(x);
-  const y = 200;
-  console.log(x + y);
 }
 
-// console.log(y); // ReferenceError: y is not defined
+// console.log(y); ERROR
 
-// A loop is a block
-for (let i = 0; i <= 10; i++) {
+for (let i = 0; i < 10; i++) {
   console.log(i);
 }
 
-// console.log(i); // ReferenceError: i is not defined
-
-// Using var
 if (true) {
   const a = 500;
   let b = 600;
-  var c = 700;
+  var c = 700; // var is not block scoped, while let and const are. We want our variables to be block scoped. That is why we use let and const.
 }
 
 console.log(c);
 
-// var IS function scoped
 function run() {
   var d = 100;
-  console.log(d);
+  console.log(d, 'from function');
 }
 
 run();
 
-// console.log(d);
-
-
-const foo = 1;
-var bar = 2; // Put on the window object
+// console.log(d); ERROR: var is function scoped so we cannot access var variables outside of a function.
