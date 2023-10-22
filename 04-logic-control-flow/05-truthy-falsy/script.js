@@ -16,75 +16,62 @@
 // - {} (empty object)
 // - function () {} (empty function)
 
-const x = function () {};
+const x = [];
 
 if (x) {
-  console.log('This is truthy');
+  console.log('This is Truthy');
 } else {
-  console.log('This is falsy');
+  console.log('This is Falsy');
 }
 
 console.log(Boolean(x));
 
-// Truthy and falsy caveats
-const children = 3;
+// Truthy and Falsy caveats
 
-// Checking for literal 0
-if (children) {
+// children = 0;
+
+// if (children) {
+//   console.log(`You have ${children} children`);
+// } else {
+//   console.log("Please enter number of children");
+// }
+
+children = 0;
+
+if (children != undefined) {
   console.log(`You have ${children} children`);
 } else {
-  console.log('Please enter number of children');
-}
-
-// Solution
-if (!isNaN(children)) {
-  console.log(`You have ${children} children`);
-} else {
-  console.log('Please enter number of children');
+  console.log("Please enter number of children");
 }
 
 // Checking for empty arrays
-const posts = ['Post One'];
 
-// Always true even when empty
-if (posts) {
-  console.log('List Posts');
+const posts = [];
+
+if (posts.length) {
+  console.log('List Post');
 } else {
   console.log('No Posts To List');
 }
 
-// Solution
-if (posts.length > 0) {
-  console.log('List Posts');
-} else {
-  console.log('No Posts To List');
-}
-
-// Checking for empty objects
+// Checking for empty object
 const user = {
-  name: 'Brad',
+  name: 'Micah'
 };
 
-// Always true, even when no properties
-if (user) {
-  console.log('List User');
-} else {
-  console.log('No User');
-}
+const user2 = {}
 
-// Solution
-if (Object.keys(user).length > 0) {
+if (Object.keys(user2).length) {
   console.log('List User');
 } else {
   console.log('No User');
 }
 
 // Loose Equality (==)
-console.log(false == 0); // true
-console.log('' == 0); // true
-console.log(null == undefined); // true
+console.log(false == 0);
+console.log("" == 0);
+console.log(null == undefined);
 
-// Strict Equality
-console.log(false === 0); // false
-console.log('' === 0); // false
-console.log(null === undefined); // false
+console.log(false === 0);
+console.log("" === 0);
+console.log(null === undefined);
