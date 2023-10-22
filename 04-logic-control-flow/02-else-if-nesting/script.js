@@ -1,4 +1,4 @@
-const d = new Date(10, 30, 2022, 6, 0, 0);
+const d = new Date(10, 30, 23, 8, 0, 0);
 const hour = d.getHours();
 
 if (hour < 12) {
@@ -22,14 +22,14 @@ if (hour < 12) {
   console.log('Good Night');
 
   if (hour >= 20) {
-    console.log('zzzzzzzz');
+    console.log('Go To Sleep!');
   }
 }
 
 if (hour >= 7 && hour < 15) {
-  console.log('It is work time!');
+  console.log('Time to work');
 }
 
 if (hour === 6 || hour === 20) {
-  console.log('Brush your teeth!');
+  console.log('Brush your teeth');
 }
