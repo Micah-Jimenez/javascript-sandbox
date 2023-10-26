@@ -10,9 +10,8 @@ for (const key in colorObj) {
   console.log(key, colorObj[key]);
 }
 
-// Loop through arrays
 const colorArr = ['red', 'green', 'blue', 'yellow'];
 
-for (const key in colorArr) {
-  console.log(colorArr[key]);
+for (const color in colorArr) {
+  console.log(colorArr[color]);
 }
