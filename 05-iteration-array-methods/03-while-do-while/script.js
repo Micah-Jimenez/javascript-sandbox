@@ -1,33 +1,38 @@
 let i = 0;
 
-while (i <= 20) {
-  console.log('Number ' + i);
-  i++;
-}
+// while (i <= 10) {
+//   console.log(i);
+//   i++;
+// }
 
 // Loop over arrays
-const arr = [10, 20, 30, 40, 50];
 
-while (i < arr.length) {
-  console.log(arr[i]);
-  i++;
-}
+// const array = [10, 20, 30, 40];
+// while (i < array.length) {
+//   console.log(array[i]);
+//   i++;
+// }
 
 // Nesting while loops
-while (i <= 5) {
-  console.log('Number ' + i);
 
-  let j = 1;
-  while (j <= 5) {
-    console.log(`${i} * ${j} = ${i * j}`);
-    j++;
-  }
+// while (i <= 5) {
+//   console.log(i);
 
-  i++;
-}
+//   let j = 1;
+//   while (j <= 5) {
+//     console.log(`${i} * ${j} = ${i * j}`);
+//     j++;
+//   }
+//   i++;
+// }
 
-// Do While Loop - Always runs once
+let height;
 do {
-  console.log('Number ' + i);
-  i++;
-} while (i <= 20);
+  height = Number(prompt('Height: '));
+  console.log(height);
+} while (height <= 0 || height > 10);
+
+for (let i = 0; i < height; i++) {
+  console.log('#');
+  console.log('-');
+}
