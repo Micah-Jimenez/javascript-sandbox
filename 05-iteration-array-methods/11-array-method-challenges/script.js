@@ -1,4 +1,3 @@
-// Challenge 1
 const people = [
   {
     firstName: 'John',
@@ -37,29 +36,23 @@ const people = [
   },
 ];
 
-const youngPeople = people
-  .filter((person) => person.age <= 25)
-  .map((person) => ({
-    name: person.firstName + ' ' + person.lastName,
-    email: person.email,
-  }));
+youngPeople = people
+.filter(people => people.age <= 25)
+.map(people => ({name: people.firstName + ' ' + people.lastName, email: people.email}));
 
 console.log(youngPeople);
 
-// Challenge 2
 const numbers = [2, -30, 50, 20, -12, -9, 7];
 
 const positiveSum = numbers
-  .filter((number) => number > 0)
-  .reduce((acc, cur) => acc + cur, 0);
+.filter(number => number >= 0)
+.reduce((acc, curr) => acc += curr);
 
 console.log(positiveSum);
 
-// Challenge 3
 const words = ['coder', 'programmer', 'developer'];
 
-const cWords = words.map((word) => {
-  return word[0].toUpperCase() + word.slice(1, word.length);
-});
+const capitalizedWords = words.map(word => word[0].toUpperCase() + word.slice(1));
 
-console.log(cWords);
+console.log(capitalizedWords);
+
