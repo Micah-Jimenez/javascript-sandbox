@@ -1,20 +1,15 @@
-// Global window object
-console.log(window);
+// console.log(window);
+// console.dir(document);
 
-// The document object is part of the window object
-console.dir(window.document);
+// console.log(document.links[0]);
 
-// We can access DOM elements directly with properties
-console.log(document.body);
-console.log(document.links[0]);
+// document.body.innerHTML = '<h1>Hello World</h1>';
 
-// We can set properties of elements
-// document.body.innerHTML = '<h1>Hello from body</h1>';
+// document.write('Hello from js');
 
-// The document object has a ton of methods. One is `document.write()`, which will write something to the document
-document.write('Hello from JS');
+console.log(document.getElementById('main'));
+const main = document.getElementById('main');
 
-// We also have methods to select elements more directly
-document.getElementById('main').innerHTML = '<h1>Hello from main</h1>';
+// main.innerHTML = '<h1>Hello from main</h1>';
 
-document.querySelector('#main h1').innerText = 'Hello';
+document.querySelector('#main h1').innerText = 'Hello'
