@@ -1,51 +1,57 @@
-// replaceWith() Method
+// 
 function replaceFirstItem() {
-  const firstItem = document.querySelector('li:first-child');
+  const firstItem = document.querySelector('li');
 
-  const li = document.createElement('li');
-  li.textContent = 'Replaced First';
+  const newEl = document.createElement('li');
+  newEl.textContent = 'replaceFirst';
 
-  firstItem.replaceWith(li);
+  firstItem.replaceWith(newEl);
 }
 
-// OuterHTML Property
+replaceFirstItem();
+
+// 
 function replaceSecondItem() {
   const secondItem = document.querySelector('li:nth-child(2)');
 
-  secondItem.outerHTML = '<li>Replaced Second</li>';
+  secondItem.outerHTML = '<li>replaceSecond</li>';
 }
 
-// Replace All Items
+replaceSecondItem();
+
+// 
 function replaceAllItems() {
-  const lis = document.querySelectorAll('li');
+  const arr = document.querySelectorAll('li');
 
-  // lis.forEach((item, index) => {
-  //   // item.outerHTML = '<li>Replace All</li>';
-  //   if (index === 1) {
-  //     item.innerHTML = 'Second Item';
-  //   } else {
-  //     item.innerHTML = 'Replace All';
-  //   }
-  // });
+  // arr.forEach((element, index) => {
+  //   element.outerHTML = `<li>item ${index + 1}</li>`;
 
-  lis.forEach(
-    (item, index) =>
-      (item.outerHTML = index === 1 ? '<li>Second Item</li>' : '<li>Item</li>')
-  );
+  arr.forEach((item, index) => item.outerHTML = index === 1 ? '<li>Second Item</li>' : '<li>Item</li>')
+
+
+  // const items = document.querySelector('ul').childElementCount;
+  
+  // for (let i = 0; i < items; i++) {
+  //   let ogItem = document.querySelector(`li:nth-child(${i + 1})`);
+
+  //   ogItem.outerHTML = `<li>newItem ${i + 1}</li>`;
+  // }
+
+  
 }
 
-// replaceChild() Method
+replaceAllItems();
+
+// 
 function replaceChildHeading() {
   const header = document.querySelector('header');
   const h1 = document.querySelector('header h1');
 
   const h2 = document.createElement('h2');
   h2.id = 'app-title';
-  h2.textContent = 'Shopping List';
+  h2.textContent = h1.textContent;
+
   header.replaceChild(h2, h1);
 }
 
-replaceFirstItem();
-replaceSecondItem();
-replaceAllItems();
 replaceChildHeading();
