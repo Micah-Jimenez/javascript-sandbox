@@ -1,13 +1,12 @@
-function insertAfter(newEl, existingEl) {
+function insertAfter (newEl, existingEl) {
+  // existingEl.insertAdjacentElement('afterend', newEl);
+  // or
   existingEl.parentElement.insertBefore(newEl, existingEl.nextSibling);
 }
 
-// New element to insert
-const li = document.createElement('li');
-li.textContent = 'Insert Me After!';
+const existingEl = document.querySelector('li:nth-child(3)');
 
-// Existing element to insert after
-const firstItem = document.querySelector('li:first-child');
+const newEl = document.createElement('li');
+newEl.textContent  = 'insertAfter';
 
-// Our custom function
-insertAfter(li, firstItem);
+insertAfter(newEl, existingEl);
