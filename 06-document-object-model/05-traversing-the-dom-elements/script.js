@@ -1,37 +1,33 @@
+// Get child elements
 let output;
-
-// Get child elements from a parent
 
 const parent = document.querySelector('.parent');
 
 output = parent.children;
-
-output = parent.children[1].innerText;
-output = parent.children[1].className;
-output = parent.children[1].nodeName;
+output = parent.children[0].innerText;
+output = parent.children[0].className;
+output = parent.children[0].nodeName;
 
 parent.children[1].innerText = 'Child Two';
-parent.children[1].style.color = 'red';
-
+parent.children[1].style.color = 'orange';
 parent.firstElementChild.innerText = 'Child One';
 parent.lastElementChild.innerText = 'Child Three';
 
-// Get parent elements from a child
+// Get Parent elements from a child
 
 const child = document.querySelector('.child');
-
 output = child.parentElement;
-child.parentElement.style.border = '1px solid #ccc';
+child.parentElement.style.backgroundColor = 'teal'
 child.parentElement.style.padding = '10px';
+child.parentElement.style.borderRadius = '10px';
 
-// Get sibling elements
-
+// Sibling elements
 const secondItem = document.querySelector('.child:nth-child(2)');
 
 output = secondItem;
-output = secondItem.nextElementSibling;
+thirdItem = secondItem.nextElementSibling;
+secondItem.nextElementSibling.style.color = 'gold';
+secondItem.previousElementSibling.style.color = 'purple'
 
-secondItem.nextElementSibling.style.color = 'green';
-secondItem.previousElementSibling.style.color = 'orange';
+console.log(thirdItem.innerText);
 
-console.log(output);
