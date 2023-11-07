@@ -1,35 +1,25 @@
-const clearBtn = document.querySelector('#clear');
-
 function onClear() {
-  const itemList = document.querySelector('ul');
-  const items = itemList.querySelectorAll('li');
-
-  // itemList.innerHTML = '';
-
-  // items.forEach((item) => item.remove());
-
-  while (itemList.firstChild) {
-    itemList.removeChild(itemList.firstChild);
-  }
+  arr = document.querySelectorAll('li');
+  arr.forEach(item => item.remove())
 }
 
-// JavaScript Event Listener
-clearBtn.onclick = function () {
-  alert('Clear Items');
-};
+const clearBtn = document.querySelector('#clear');
 
-clearBtn.onclick = function () {
-  console.log('Clear Items');
-};
+// JavaScript Event Listener
+// clearBtn.onclick = function () {
+//   alert('clear');
+// };
+
+// clearBtn.onclick = function () {
+//   console.log('clear');
+// };
 
 // addEventListener()
-clearBtn.addEventListener('click', () => alert('Clear Items'));
+// clearBtn.addEventListener('click', () => alert('clear all'));
 
-// Use named function
+// clearBtn.addEventListener('click', () => console.log('clear all'));
+
 clearBtn.addEventListener('click', onClear);
+// setTimeout(() => clearBtn.removeEventListener('click', onClear), 5000);
 
-// removeEventListener()
-setTimeout(() => clearBtn.removeEventListener('click', onClear), 5000);
-
-// Fire off event from JS
-setTimeout(() => clearBtn.click(), 5000);
+// setTimeout(() => clearBtn.click(), 5000);
