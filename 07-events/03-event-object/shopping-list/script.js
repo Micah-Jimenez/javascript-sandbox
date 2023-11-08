@@ -1,38 +1,33 @@
 const logo = document.querySelector('img');
 
 function onClick(e) {
-  // Event properties
   // console.log(e.target);
   // console.log(e.currentTarget);
   // console.log(e.type);
   // console.log(e.timeStamp);
-  // console.log(e.clientX);
-  // console.log(e.clientY);
-  // console.log(e.offsetX);
-  // console.log(e.offsetY);
-  // console.log(e.pageX);
-  // console.log(e.pageY);
-  // console.log(e.screenX);
-  // console.log(e.screenY);
+  // console.log(`X ${e.clientX}, Y ${e.clientY}`);
+  // console.log(`X ${e.offsetX}, Y ${e.offsetY}`);
+  // console.log(`X ${e.pageX}, Y ${e.pageY}`);
+  console.log(`X ${e.screenX}, Y ${e.screenY}`);
 }
 
-function onDrag(e) {
-  document.querySelector('h1').textContent = `X ${e.clientX} Y ${e.clientY}`;
-}
+logo.addEventListener('click', onClick)
 
-logo.addEventListener('click', onClick);
-logo.addEventListener('drag', onDrag);
-
-// document.body.addEventListener('click', function (e) {
+// document.body.addEventListener('click', (e) => {
 //   console.log(e.target);
 //   console.log(e.currentTarget);
-// });
+// })
 
-// e.preventDefault() method prevents the default behavior
-document.querySelector('a').addEventListener('click', function (e) {
+document.querySelector('a').addEventListener('click', (e) => {
   e.preventDefault();
-  console.log('Link was clicked');
-});
+  alert('Access Denied');
+})
+
+function onDrag(e) {
+  document.querySelector('h1').textContent = `X ${e.clientX}, Y ${e.clientY}`;
+}
+
+logo.addEventListener('drag', onDrag)
 
 /*
 - `target` - The element that triggered the event
